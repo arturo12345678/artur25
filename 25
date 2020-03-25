@@ -1,0 +1,238 @@
+from telethon.sync import TelegramClient
+from telethon import events
+import time
+import asyncio
+from telethon.tl.functions.messages import SearchRequest 
+from telethon.tl.types import InputMessagesFilterEmpty
+
+api_id = 952378
+api_hash='376ed6a57831aca11be812ff628eb53a'
+phone = '+5354052136'
+client = TelegramClient(phone, api_id, api_hash)
+client.start()
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ('/fight' in event.raw_text):
+        await client.send_message ("Elder of Assassin Creed", event.raw_text)
+
+@client.on(events.NewMessage(chats=("Amigos Chat")))
+async def handler(event):
+    if ('HIGHNEST' in event.raw_text):
+        await client.send_message('chtwrsbot', '🦅')
+
+@client.on(events.NewMessage(chats=("Amigos Chat")))
+async def handler(event):
+    if ('MOONLIGHT' in event.raw_text):
+        await client.send_message('chtwrsbot', '🌑')
+
+@client.on(events.NewMessage(chats=("Amigos Chat")))
+async def handler(event):
+    if ('DEERHORN' in event.raw_text):
+        await client.send_message('chtwrsbot', '🦌')
+
+@client.on(events.NewMessage(chats=("Amigos Chat")))
+async def handler(event):
+    if ('WOLFPACK' in event.raw_text):
+        await client.send_message('chtwrsbot', '🐺')
+
+@client.on(events.NewMessage(chats=("Amigos Chat")))
+async def handler(event):
+    if ('POTATO' in event.raw_text):
+        await client.send_message('chtwrsbot', '🥔')
+
+@client.on(events.NewMessage(chats=("Amigos Chat")))
+async def handler(event):
+    if ('SHARKTEETH' in event.raw_text):
+        await client.send_message('chtwrsbot', '🦈')
+
+
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ("You'll be back in" in event.raw_text):
+        await asyncio.sleep(540) 
+        await client.send_message('chtwrsbot', '🗺Quests')
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ('Leaderboard of fighters are updated:' in event.raw_text):
+        await client.send_message('chtwrsbot', '▶️Fast fight')
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ('You successfully defeated' in event.raw_text):
+        await asyncio.sleep(60)
+        await client.send_message('chtwrsbot', '🛡Defend')
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ('Stamina restored. You are ready for more adventures!' in event.raw_text):
+        await asyncio.sleep(2)
+        await client.send_message('chtwrsbot', '🗺Quests')
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ('Battle is coming. You have no time for games.' in event.raw_text):
+        await asyncio.sleep(2)
+        await client.send_message('chtwrsbot', '🛡Defend')
+
+@client.on(events.NewMessage(chats=('@chtwrsbot')))
+async def handler(event):
+    if ('Who knows what is lurking in mud.' in event.raw_text):
+        await asyncio.sleep(2)
+        await event.click(text='⛰️Valley')
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ('/promo' in event.raw_text):
+        await asyncio.sleep(2)
+        await client.send_message('chtwrsbot', '🛡Defend')
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ('/f_report' in event.raw_text):
+        await client.send_message('chtwrsbot', '/f_report')
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ('Encounter:' in event.raw_text):
+        await asyncio.sleep(2)
+        await client.send_message('chtwrsbot', '/whois')
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ("You should heal up a bit first." in event.raw_text):
+        await asyncio.sleep(1800) 
+        await client.send_message('chtwrsbot', '🗺Quests')
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ("You need to heal your wounds and recover" in event.raw_text):
+        await asyncio.sleep(2) 
+        await client.send_message('chtwrsbot', '🗺Quests')
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ("Not enough gold to pay the entrance fee." in event.raw_text):
+        await asyncio.sleep(2) 
+        await client.send_message('chtwrsbot', '🗺Quests')
+
+@client.on(events.NewMessage(chats=('Amigos Chat')))
+async def handler(event):
+    if ("🗺Quests" in event.raw_text):
+        await asyncio.sleep(2) 
+        await client.send_message('chtwrsbot', '🗺Quests')
+
+@client.on(events.NewMessage(chats=('Amigos Chat')))
+async def handler(event):
+    if ("▶️Fast fight" in event.raw_text):
+        await asyncio.sleep(2) 
+        await client.send_message('chtwrsbot', '▶️Fast fight')
+
+@client.on(events.NewMessage(chats=('@chtwrsbot')))
+async def handler(event):
+    if ('You were strolling around on your horse' in event.raw_text):
+        await asyncio.sleep(1)
+        await event.click(text='🧹Intervene')
+
+@client.on(events.NewMessage(chats=('Amigos Chat')))
+async def handler(event):
+    if ("⬅Back" in event.raw_text):
+        await client.send_message('chtwrsbot', '⬅Back')
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ("Battle of the seven castles in" in event.raw_text):
+        await client.send_message('Amigos Chat', event.raw_text) 
+
+@client.on(events.NewMessage(chats=('Amigos Chat')))
+async def handler(event):
+    if ("⚖Exchange" in event.raw_text):
+        await client.send_message('chtwrsbot', event.raw_text) 
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ("Here you can buy and sell some items." in event.raw_text):
+        await client.send_message('Amigos Chat', event.raw_text) 
+
+@client.on(events.NewMessage(chats=('Amigos Chat')))
+async def handler(event):
+    if ("/t_01" in event.raw_text):
+        await client.send_message('chtwrsbot', event.raw_text) 
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ("Thread offers now:" in event.raw_text):
+        await client.send_message('Amigos Chat', event.raw_text) 
+
+@client.on(events.NewMessage(chats=('Amigos Chat')))
+async def handler(event):
+    if ("/wtb_01" in event.raw_text):
+        await client.send_message('chtwrsbot', event.raw_text) 
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ("You don't even have enough" in event.raw_text):
+        await client.send_message('Amigos Chat', event.raw_text) 
+
+@client.on(events.NewMessage(chats=('Amigos Chat')))
+async def handler(event):
+    if ("⚔Attack" in event.raw_text):
+        await client.send_message('chtwrsbot', event.raw_text) 
+
+@client.on(events.NewMessage(chats=('Amigos Chat')))
+async def handler(event):
+    if ("🛡Defend" in event.raw_text):
+        await client.send_message('chtwrsbot', '🛡Defend') 
+
+@client.on(events.NewMessage(chats=('Amigos Chat')))
+async def handler(event):
+    if ("/wts_01" in event.raw_text):
+        await client.send_message('chtwrsbot', event.raw_text)
+
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ("You don't have these items" in event.raw_text):
+        await client.send_message('Amigos Chat', event.raw_text) 
+
+
+@client.on(events.NewMessage(chats=('Amigos Chat')))
+async def handler(event):
+    if ("/arena" in event.raw_text):
+        await client.send_message('chtwrsbot', event.raw_text)
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ("Dirty air is soaked with the thick" in event.raw_text):
+        await client.send_message('Amigos Chat', event.raw_text)
+
+
+@client.on(events.NewMessage(chats=('Amigos Chat')))
+async def handler(event):
+    if ("/report" in event.raw_text):
+        await client.send_message('chtwrsbot', event.raw_text)
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ("Your result on the battlefield:" in event.raw_text):
+        await client.send_message('Amigos Chat', event.raw_text)
+
+
+
+@client.on(events.NewMessage(chats=('Amigos Chat')))
+async def handler(event):
+    if ("🛎Auction" in event.raw_text):
+        await client.send_message('chtwrsbot', event.raw_text)
+
+@client.on(events.NewMessage(chats=('chtwrsbot')))
+async def handler(event):
+    if ("🛎Welcome to auction!" in event.raw_text):
+        await client.send_message('Amigos Chat', event.raw_text)
+
+
+
+
+print('artur...') 
+client.run_until_disconnected()
